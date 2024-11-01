@@ -13,7 +13,7 @@ public class AnimalsCage {
     private Animal animal;
 
     @Autowired
-    private static Timer timer;
+    private Timer timer;
 
     public void whatAnimalSay() {
         System.out.println("Say:");
@@ -22,8 +22,7 @@ public class AnimalsCage {
         System.out.println(new Timer().getTime());
         System.out.println("________________________");
     }
-
-    public static Timer getTimer() {
+    public Timer getTimer() {
         return timer;
     }
 }
