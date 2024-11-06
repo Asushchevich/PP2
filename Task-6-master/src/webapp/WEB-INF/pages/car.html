@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car</title>
+</head>
+<body>
+<div>
+    <th:block th:each="msg : ${messages}">
+        <h1 th:text="${msg}"></h1>
+    </th:block>
+    <a href="http://localhost:8081/">move to startPage</a>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Model</th>
+            <th>Color</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="car : ${cars}">
+            <td th:text="${car.id}">ID</td>
+            <td th:text="${car.model}">Model</td>
+            <td th:text="${car.color}">Color</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
